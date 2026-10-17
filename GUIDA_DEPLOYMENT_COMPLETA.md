@@ -59,7 +59,7 @@ Un sito web professionale per uno studio di nutrizione, composto da:
 Il repository del progetto ti è stato condiviso. Per clonarlo:
 
 ```bash
-git clone https://github.com/_______________/centro-metis-website.git
+git clone [https://github.com/Cristiandagostino91/web-metis-def.git](https://github.com/Cristiandagostino91/web-metis-def.git)
 ```
 
 ## Passo 2.3: Verifica la Struttura
