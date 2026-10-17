@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida Deployment Centro Metis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fff; }
+        @media print { body { padding: 20px; font-size: 11pt; } .page-break { page-break-before: always; } h1, h2 { page-break-after: avoid; } }
+        h1 { color: #adc80b; font-size: 28px; margin-bottom: 10px; border-bottom: 3px solid #adc80b; padding-bottom: 10px; }
+        h2 { color: #2c3e50; font-size: 20px; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #adc80b; padding-left: 15px; }
+        h3 { color: #34495e; font-size: 16px; margin-top: 20px; margin-bottom: 10px; }
+        p { margin-bottom: 12px; }
+        .header { text-align: center; margin-bottom: 40px; padding: 30px; background: linear-gradient(135deg, #adc80b 0%, #8fb009 100%); color: white; border-radius: 10px; }
+        .header h1 { color: white; border: none; font-size: 32px; }
+        .header p { font-size: 18px; opacity: 0.9; }
+        .toc { background: #f8f9fa; padding: 20px 30px; border-radius: 8px; margin-bottom: 30px; }
+        .toc h2 { border: none; padding: 0; margin-top: 0; }
+        .toc ol { margin-left: 20px; }
+        .toc li { margin: 8px 0; }
+        .toc a { color: #2c3e50; text-decoration: none; }
+        .step-box { background: #e8f5e9; border: 1px solid #adc80b; border-radius: 8px; padding: 15px 20px; margin: 15px 0; }
+        .step-box.warning { background: #fff3e0; border-color: #ff9800; }
+        .step-box.important { background: #fce4ec; border-color: #e91e63; }
+        .step-number { display: inline-block; width: 28px; height: 28px; background: #adc80b; color: white; border-radius: 50%; text-align: center; line-height: 28px; font-weight: bold; margin-right: 10px; }
+        code { background: #f4f4f4; padding: 2px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 15px 20px; border-radius: 8px; overflow-x: auto; margin: 15px 0; font-size: 12px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+        th { background: #adc80b; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .credentials-box { background: #fff; border: 2px solid #2c3e50; border-radius: 8px; padding: 20px; margin: 20px 0; font-family: 'Courier New', monospace; }
+        .credentials-box h3 { text-align: center; margin-bottom: 15px; color: #2c3e50; }
+        .fill-field { border-bottom: 1px solid #333; display: inline-block; min-width: 200px; margin: 5px 0; }
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { padding: 8px 0; padding-left: 30px; position: relative; }
+        .checklist li:before { content: "☐"; position: absolute; left: 0; font-size: 18px; }
+        .url-box { background: #e3f2fd; border: 1px solid #2196f3; padding: 15px; border-radius: 8px; margin: 10px 0; word-break: break-all; }
+        .cost-table th { background: #27ae60; }
+        footer { margin-top: 50px; padding-top: 20px; border-top: 2px solid #eee; text-align: center; color: #777; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>📘 GUIDA DEPLOYMENT COMPLETA</h1>
+    <p>Centro Metis - Sito Vetrina Nutrizionista</p>
+</div>
+
+<div class="toc">
+    <h2>📑 Indice</h2>
+    <ol>
+        <li>Panoramica del Progetto</li>
+        <li>Repository GitHub</li>
+        <li>Creare Account MongoDB Atlas</li>
+        <li>Creare Account DigitalOcean</li>
+        <li>Deploy su DigitalOcean App Platform</li>
+        <li>Configurazione Dominio</li>
+        <li>Importare il Database</li>
+        <li>Verifica Finale</li>
+        <li>Credenziali da Conservare</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>1. Panoramica del Progetto</h2>
+    <h3>Cos'è questo progetto?</h3>
+    <p>Un sito web professionale per uno studio di nutrizione:</p>
+    <ul>
+        <li><strong>Sito pubblico</strong>: Homepage, servizi, blog, contatti</li>
+        <li><strong>Pannello Admin</strong>: Gestione contenuti (/admin)</li>
+        <li><strong>E-commerce</strong>: Nascosto ma presente (riattivabile)</li>
+    </ul>
+    <h3>💰 Costi Stimati</h3>
+    <table class="cost-table">
+        <tr><th>Servizio</th><th>Costo Mensile</th><th>Note</th></tr>
+        <tr><td>DigitalOcean App Platform</td><td>$5-12</td><td>Backend + Frontend</td></tr>
+        <tr><td>MongoDB Atlas</td><td>$0</td><td>Piano gratuito</td></tr>
+        <tr><td><strong>TOTALE</strong></td><td><strong>~$5-12/mese</strong></td><td></td></tr>
+    </table>
+</div>
+
+<div class="section page-break">
+    <h2>2. Repository GitHub</h2>
+    <div class="step-box"><p><span class="step-number">1</span> Vai su <strong>https://github.com</strong> e accedi al tuo account</p></div>
+    <div class="step-box"><p><span class="step-number">2</span> Clona il repository del progetto che ti è stato condiviso</p></div>
+    <div class="url-box">
+        <strong>📎 Link Repository GitHub:</strong><br><br>
+        https://github.com/<span class="fill-field"></span>/centro-metis-website
+    </div>
+</div>
+
+<div class="section page-break">
+    <h2>3. Creare Account MongoDB Atlas</h2>
+    <p>MongoDB Atlas è il servizio cloud gratuito per il database.</p>
+    <h3>3.1 Registrazione</h3>
+    <div class="step-box"><p><span class="step-number">1</span> Vai su <strong>https://www.mongodb.com/cloud/atlas/register</strong></p></div>
+    <div class="step-box"><p><span class="step-number">2</span> Compila il form con email, password e nome</p></div>
+    <div class="step-box"><p><span class="step-number">3</span> Verifica l'email cliccando il link ricevuto</p></div>
+    <h3>3.2 Creare il Cluster</h3>
+    <div class="step-box"><p><span class="step-number">4</span> Clicca <strong>"Build a Database"</strong></p></div>
+    <div class="step-box"><p><span class="step-number">5</span> Seleziona <strong>"M0 FREE"</strong> (piano gratuito)</p></div>
+    <div class="step-box"><p><span class="step-number">6</span> Provider: <strong>AWS</strong> | Regione: <strong>Frankfurt</strong></p></div>
+    <div class="step-box"><p><span class="step-number">7</span> Cluster Name: <code>CentroMetisCluster</code></p></div>
+    <h3>3.3 Creare Utente Database</h3>
+    <div class="step-box"><p><span class="step-number">8</span> Crea utente: <code>centrometis_admin</code></p></div>
+    <div class="step-box important"><p><span class="step-number">9</span> <strong>IMPORTANTE:</strong> Genera e SALVA la password!</p></div>
+    <h3>3.4 Configurare Accesso</h3>
+    <div class="step-box"><p><span class="step-number">10</span> Seleziona <strong>"Allow Access from Anywhere"</strong></p></div>
+    <h3>3.5 Ottenere Connection String</h3>
+    <div class="step-box"><p><span class="step-number">11</span> Clicca <strong>"Connect"</strong> → <strong>"Connect your application"</strong></p></div>
+    <div class="step-box"><p><span class="step-number">12</span> Copia la connection string e sostituisci <code>&lt;password&gt;</code></p></div>
+    <div class="credentials-box">
+        <h3>📝 Credenziali MongoDB</h3>
+        <p><strong>Connection String:</strong></p>
+        <p style="font-size: 11px;">mongodb+srv://centrometis_admin:<span class="fill-field" style="min-width: 100px;"></span>@<span class="fill-field" style="min-width: 150px;"></span>.mongodb.net/</p>
+        <p><strong>Database Name:</strong> centrometis</p>
+        <p><strong>Username:</strong> centrometis_admin</p>
+        <p><strong>Password:</strong> <span class="fill-field"></span></p>
+    </div>
+</div>
+
+<div class="section page-break">
+    <h2>4. Creare Account DigitalOcean</h2>
+    <div class="step-box"><p><span class="step-number">1</span> Vai su <strong>https://www.digitalocean.com</strong></p></div>
+    <div class="step-box"><p><span class="step-number">2</span> Clicca <strong>"Sign up"</strong></p></div>
+    <div class="step-box"><p><span class="step-number">3</span> Registrati con Email, Google o GitHub</p></div>
+    <div class="step-box"><p><span class="step-number">4</span> Aggiungi metodo di pagamento</p></div>
+    <div class="step-box" style="background: #e3f2fd; border-color: #2196f3;">
+        <p>💡 <strong>Bonus:</strong> I nuovi account ricevono <strong>$200 di crediti gratuiti</strong> per 60 giorni!</p>
+    </div>
+</div>
+
+<div class="section page-break">
+    <h2>5. Deploy su DigitalOcean</h2>
+    <h3>5.1 Creare App</h3>
+    <div class="step-box"><p><span class="step-number">1</span> Dashboard → <strong>"Create"</strong> → <strong>"Apps"</strong></p></div>
+    <h3>5.2 Connettere GitHub</h3>
+    <div class="step-box"><p><span class="step-number">2</span> Seleziona <strong>"GitHub"</strong> e autorizza</p></div>
+    <div class="step-box"><p><span class="step-number">3</span> Seleziona il repository <code>centro-metis-website</code></p></div>
+    <h3>5.3 Configurare Backend</h3>
+    <table>
+        <tr><th>Impostazione</th><th>Valore</th></tr>
+        <tr><td>Name</td><td><code>backend</code></td></tr>
+        <tr><td>Source Directory</td><td><code>/backend</code></td></tr>
+        <tr><td>Type</td><td>Web Service</td></tr>
+        <tr><td>Build Command</td><td><code>pip install -r requirements.txt</code></td></tr>
+        <tr><td>Run Command</td><td><code>uvicorn server:app --host 0.0.0.0 --port 8080</code></td></tr>
+        <tr><td>HTTP Port</td><td><code>8080</code></td></tr>
+        <tr><td>Instance Size</td><td>Basic ($5/mo)</td></tr>
+    </table>
+    <h3>5.4 Configurare Frontend</h3>
+    <div class="step-box"><p><span class="step-number">4</span> Clicca <strong>"+ Add Resource"</strong> → <strong>"Static Site"</strong></p></div>
+    <table>
+        <tr><th>Impostazione</th><th>Valore</th></tr>
+        <tr><td>Name</td><td><code>frontend</code></td></tr>
+        <tr><td>Source Directory</td><td><code>/frontend</code></td></tr>
+        <tr><td>Build Command</td><td><code>npm install && npm run build</code></td></tr>
+        <tr><td>Output Directory</td><td><code>build</code></td></tr>
+    </table>
+    <h3>5.5 Variabili Backend</h3>
+    <table>
+        <tr><th>Chiave</th><th>Valore</th></tr>
+        <tr><td><code>MONGO_URL</code></td><td>Connection string MongoDB</td></tr>
+        <tr><td><code>DB_NAME</code></td><td><code>centrometis</code></td></tr>
+        <tr><td><code>JWT_SECRET</code></td><td>Stringa casuale 64 caratteri</td></tr>
+    </table>
+    <h3>5.6 Variabili Frontend</h3>
+    <table>
+        <tr><th>Chiave</th><th>Valore</th></tr>
+        <tr><td><code>REACT_APP_BACKEND_URL</code></td><td><code>${backend.PUBLIC_URL}</code></td></tr>
+    </table>
+    <h3>5.7 Lanciare</h3>
+    <div class="step-box"><p><span class="step-number">5</span> Regione: <strong>Frankfurt</strong> → Clicca <strong>"Create Resources"</strong></p></div>
+    <div class="step-box warning"><p>⏳ Il primo deploy richiede 5-10 minuti</p></div>
+</div>
+
+<div class="section page-break">
+    <h2>6. Configurazione Dominio</h2>
+    <div class="step-box"><p><span class="step-number">1</span> App → Settings → <strong>Domains</strong> → <strong>"Add Domain"</strong></p></div>
+    <div class="step-box"><p><span class="step-number">2</span> Inserisci il dominio e segui le istruzioni DNS</p></div>
+    <p>Sul pannello del registrar (Aruba, GoDaddy, ecc.), configura i record DNS forniti da DigitalOcean.</p>
+    <p>⏳ <em>La propagazione DNS può richiedere 24-48 ore</em></p>
+</div>
+
+<div class="section">
+    <h2>7. Importare il Database</h2>
+    <h3>Con MongoDB Compass</h3>
+    <div class="step-box"><p><span class="step-number">1</span> Scarica MongoDB Compass da <strong>mongodb.com/try/download/compass</strong></p></div>
+    <div class="step-box"><p><span class="step-number">2</span> Connettiti con la connection string</p></div>
+    <div class="step-box"><p><span class="step-number">3</span> Crea database <code>centrometis</code></p></div>
+    <div class="step-box"><p><span class="step-number">4</span> Importa <code>database_export.json</code></p></div>
+</div>
+
+<div class="section page-break">
+    <h2>8. Verifica Finale</h2>
+    <h3>✅ Checklist</h3>
+    <ul class="checklist">
+        <li>Homepage carica correttamente</li>
+        <li>Immagini visibili</li>
+        <li>Menu di navigazione funziona</li>
+        <li>Pagina Servizi mostra i servizi</li>
+        <li>Pagina Blog mostra gli articoli</li>
+        <li>Pulsante WhatsApp visibile</li>
+        <li>Login Admin funziona (/admin)</li>
+        <li>Dashboard Admin mostra statistiche</li>
+    </ul>
+</div>
+
+<div class="section page-break">
+    <h2>9. Credenziali da Conservare</h2>
+    <div class="credentials-box" style="background: #f5f5f5;">
+        <h3 style="font-size: 18px; border-bottom: 2px solid #333; padding-bottom: 10px;">
+            📋 CREDENZIALI PROGETTO CENTRO METIS
+        </h3>
+        <p style="margin-top: 20px;"><strong>🔗 GITHUB</strong></p>
+        <p>Repository: https://github.com/<span class="fill-field"></span>/centro-metis-website</p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ccc;">
+        <p><strong>🗄️ MONGODB ATLAS</strong></p>
+        <p>URL: https://cloud.mongodb.com</p>
+        <p>Email: <span class="fill-field"></span></p>
+        <p>Password: <span class="fill-field"></span></p>
+        <p>Connection String: <span class="fill-field" style="min-width: 300px;"></span></p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ccc;">
+        <p><strong>🌊 DIGITALOCEAN</strong></p>
+        <p>URL: https://cloud.digitalocean.com</p>
+        <p>Email: <span class="fill-field"></span></p>
+        <p>Password: <span class="fill-field"></span></p>
+        <p>App URL: <span class="fill-field"></span></p>
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ccc;">
+        <p><strong>👤 PANNELLO ADMIN SITO</strong></p>
+        <p>URL: https://centrometis.com/admin</p>
+        <p>Email: <strong>admin@centrometis.com</strong></p>
+        <p>Password: <strong>CentroMetis@2024!Admin</strong></p>
+    </div>
+</div>
+
+<footer>
+    <p>Centro Metis - Sito Vetrina Nutrizionista</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Robots.txt per Centro Metis
+# https://www.centrometis.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.centrometis.com/sitemap.xml
+
+# Blocca pagine admin
+Disallow: /admin
+Disallow: /admin/
+
+# Blocca API
+Disallow: /api/
+
+# Crawl delay per essere gentili con il server
+Crawl-delay: 1
