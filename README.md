@@ -36,7 +36,7 @@ npm start
 ## Credenziali Admin
 - **URL**: /admin
 - **Email**: admin@centrometis.com
-- **Password**: CentroMetis@2024!Admin
+- **Password**: ##########
 
 ## Deployment
 Vedi `GUIDA_DEPLOYMENT_COMPLETA.md` per istruzioni dettagliate.
