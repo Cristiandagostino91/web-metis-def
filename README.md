@@ -35,7 +35,7 @@ npm start
 
 ## Credenziali Admin
 - **URL**: /admin
-- **Email**: admin@centrometis.com
+- **Email**: ############
 - **Password**: ##########
 
 ## Deployment
