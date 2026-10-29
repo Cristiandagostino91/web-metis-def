@@ -1,7 +1,7 @@
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from jose import JWTError, jwt
-from passlib.context import CryptContext
+import bcrypt
 from datetime import datetime, timedelta
 from pydantic import BaseModel
 import os
@@ -12,14 +12,13 @@ ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 480  # 8 hours
 
 # Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # HTTP Bearer security
 security = HTTPBearer()
 
 # Admin credentials - secure defaults
 ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "admin@centrometis.com")
-ADMIN_PASSWORD_HASH = pwd_context.hash(os.environ.get("ADMIN_PASSWORD", "CentroMetis@2024!Admin"))
+ADMIN_PASSWORD_HASH = bcrypt.hashpw(os.environ.get("ADMIN_PASSWORD", "CentroMetis@2024!Admin").encode(), bcrypt.gensalt())
 
 
 class Token(BaseModel):
@@ -41,8 +40,8 @@ class AdminUser(BaseModel):
     name: str = "Amministratore"
 
 
-def verify_password(plain_password: str, hashed_password: str) -> bool:
-    return pwd_context.verify(plain_password, hashed_password)
+def verify_password(plain_password: str, hashed_password: bytes) -> bool:
+    return bcrypt.checkpw(plain_password.encode(), hashed_password)
 
 
 def create_access_token(data: dict, expires_delta: timedelta | None = None) -> str:

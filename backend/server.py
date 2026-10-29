@@ -3,6 +3,8 @@ from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+import certifi
+import json
 import os
 import logging
 from pathlib import Path
@@ -29,7 +31,7 @@ load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
+client = AsyncIOMotorClient(mongo_url, tlsCAFile=certifi.where()) if mongo_url.startswith('mongodb+srv') or 'tls=true' in mongo_url.lower() else AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
@@ -490,7 +492,26 @@ async def root():
 
 @api_router.get("/health")
 async def health_check():
-    return {"status": "healthy", "database": "connected"}
+    try:
+        await client.admin.command("ping")
+        return {"status": "healthy", "database": "connected"}
+    except Exception as e:
+        return {"status": "unhealthy", "database": "error", "detail": str(e)[:300]}
+
+
+@api_router.get("/seed-database")
+async def seed_database(force: bool = False):
+    data = json.loads((ROOT_DIR / "seed_data.json").read_text(encoding="utf-8"))
+    result = {}
+    for name, docs in data.items():
+        existing = await db[name].count_documents({})
+        if existing and not force:
+            result[name] = f"skipped ({existing} already present)"
+            continue
+        await db[name].delete_many({})
+        await db[name].insert_many([dict(d) for d in docs])
+        result[name] = f"{len(docs)} inserted"
+    return {"status": "ok", "result": result}
 
 
 # Include the router in the main app
