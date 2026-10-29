@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File
+from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File, Request
 from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -500,8 +500,10 @@ async def health_check():
 
 
 @api_router.get("/seed-database")
-async def seed_database(force: bool = False):
-    data = json.loads((ROOT_DIR / "seed_data.json").read_text(encoding="utf-8"))
+async def seed_database(request: Request, force: bool = False):
+    base = f"https://{request.headers.get('host')}/api/uploads/"
+    raw = (ROOT_DIR / "seed_data.json").read_text(encoding="utf-8")
+    data = json.loads(raw.replace('"/api/uploads/', f'"{base}'))
     result = {}
     for name, docs in data.items():
         existing = await db[name].count_documents({})

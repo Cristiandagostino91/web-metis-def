@@ -1,155 +1,341 @@
 {
-  "services": [
+ "blog_posts": [
+  {
+   "id": "b1",
+   "title": "Dieta chetogenica e fertilità",
+   "excerpt": "Migliorare gli indici di fertilità femminili e maschili attraverso un approccio nutrizionale chetogenico.",
+   "content": "La dieta chetogenica può migliorare significativamente gli indici di fertilità sia femminili che maschili. Attraverso la riduzione dell'infiammazione sistemica e il riequilibrio ormonale, questo approccio nutrizionale si dimostra efficace nel supportare chi desidera una gravidanza.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "13 marzo 2025",
+   "image": "/api/uploads/dieta-chetogenica.jpg",
+   "category": "Fertilità",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499724",
+   "updatedAt": "2026-10-29T17:53:24.499727"
+  },
+  {
+   "id": "b2",
+   "title": "Alimentazione sostenibile: il modello della dieta mediterranea",
+   "excerpt": "L'impronta ecologica delle nostre scelte alimentari e come la dieta mediterranea rappresenti un modello sostenibile.",
+   "content": "La dieta mediterranea non è solo un modello di alimentazione sana, ma rappresenta anche una scelta sostenibile per l'ambiente. L'impronta ecologica delle nostre scelte alimentari ha un impatto significativo sul pianeta.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "13 marzo 2025",
+   "image": "/api/uploads/dieta-mediterranea.png",
+   "category": "Sostenibilità",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499745",
+   "updatedAt": "2026-10-29T17:53:24.499745"
+  },
+  {
+   "id": "b3",
+   "title": "La nutrizione per la fibromialgia",
+   "excerpt": "Ridurre l'infiammazione e curare il microbiota attraverso un approccio nutrizionale mirato.",
+   "content": "La fibromialgia può essere gestita efficacemente attraverso un approccio nutrizionale mirato. Ridurre l'infiammazione sistemica e curare il microbiota intestinale sono strategie fondamentali per migliorare la qualità della vita dei pazienti.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "13 marzo 2025",
+   "image": "/api/uploads/fibromialgia.jpg",
+   "category": "Patologie",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499753",
+   "updatedAt": "2026-10-29T17:53:24.499753"
+  },
+  {
+   "id": "b4",
+   "title": "Come perdere peso in modo sano e duraturo",
+   "excerpt": "Scopri le strategie scientificamente provate per perdere peso senza effetto yo-yo e mantenere i risultati nel tempo.",
+   "content": "Perdere peso in modo sano richiede un approccio equilibrato che non si basi su diete drastiche ma su un cambiamento graduale delle abitudini alimentari.\n\nI principi fondamentali per un dimagrimento efficace:\n\n1. Deficit calorico moderato: non più di 500 kcal al giorno rispetto al fabbisogno\n2. Apporto proteico adeguato: per preservare la massa muscolare\n3. Attività fisica regolare: combinazione di cardio e resistenza\n4. Idratazione corretta: almeno 2 litri di acqua al giorno\n5. Sonno di qualità: fondamentale per regolare gli ormoni della fame\n\nEvita le diete troppo restrittive che portano inevitabilmente all'effetto yo-yo. Un dimagrimento sano prevede una perdita di 0,5-1 kg a settimana.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "10 marzo 2025",
+   "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+   "category": "Dimagrimento",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499760",
+   "updatedAt": "2026-10-29T17:53:24.499760"
+  },
+  {
+   "id": "b5",
+   "title": "I benefici della dieta mediterranea",
+   "excerpt": "La dieta mediterranea è patrimonio UNESCO: scopri perché è considerata il modello alimentare più sano al mondo.",
+   "content": "La dieta mediterranea è riconosciuta a livello mondiale come il modello alimentare più salutare, tanto da essere stata inserita nel patrimonio immateriale UNESCO.\n\nCaratteristiche principali:\n- Abbondanza di frutta, verdura, legumi e cereali integrali\n- Olio extravergine d'oliva come grasso principale\n- Consumo moderato di pesce, pollame e latticini\n- Consumo limitato di carne rossa\n- Un bicchiere di vino rosso ai pasti (facoltativo)\n\nBenefici scientificamente provati:\n- Riduzione del rischio cardiovascolare del 30%\n- Prevenzione del diabete tipo 2\n- Protezione contro alcune forme di tumore\n- Miglioramento delle funzioni cognitive\n- Longevità: le popolazioni mediterranee sono tra le più longeve\n\nAdottare questo stile alimentare significa non solo nutrirsi meglio ma anche abbracciare una cultura del cibo basata sulla convivialità e il piacere della tavola.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "8 marzo 2025",
+   "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800",
+   "category": "Alimentazione",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499774",
+   "updatedAt": "2026-10-29T17:53:24.499774"
+  },
+  {
+   "id": "b6",
+   "title": "Alimentazione e sistema immunitario",
+   "excerpt": "Scopri quali alimenti possono rafforzare le tue difese immunitarie e proteggerti dalle malattie stagionali.",
+   "content": "Il sistema immunitario è la nostra prima linea di difesa contro virus, batteri e altri patogeni. L'alimentazione gioca un ruolo fondamentale nel suo corretto funzionamento.\n\nNutrienti chiave per l'immunità:\n\nVITAMINA C\n- Agrumi, kiwi, peperoni, broccoli\n- Potente antiossidante, stimola la produzione di globuli bianchi\n\nVITAMINA D\n- Pesce grasso, uova, esposizione solare\n- Regola la risposta immunitaria\n\nZINCO\n- Carne, legumi, semi di zucca\n- Essenziale per lo sviluppo delle cellule immunitarie\n\nPROBIOTICI\n- Yogurt, kefir, crauti\n- Il 70% del sistema immunitario risiede nell'intestino\n\nAlimenti da limitare:\n- Zuccheri raffinati\n- Alcol in eccesso\n- Cibi ultra-processati\n\nUn'alimentazione varia e bilanciata, ricca di frutta e verdura di stagione, è la migliore strategia per mantenere le difese immunitarie efficienti.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "5 marzo 2025",
+   "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+   "category": "Salute",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499781",
+   "updatedAt": "2026-10-29T17:53:24.499781"
+  },
+  {
+   "id": "b7",
+   "title": "Intolleranze alimentari: cosa c'è da sapere",
+   "excerpt": "Distinguere tra allergie, intolleranze e sensibilità alimentari per una diagnosi corretta e un'alimentazione adeguata.",
+   "content": "Le intolleranze alimentari sono spesso confuse con le allergie, ma si tratta di condizioni molto diverse che richiedono approcci differenti.\n\nALLERGIA ALIMENTARE\n- Reazione del sistema immunitario (IgE)\n- Sintomi immediati e potenzialmente gravi\n- Test diagnostici affidabili (prick test, RAST)\n\nINTOLLERANZA ALIMENTARE\n- Non coinvolge il sistema immunitario\n- Sintomi graduali e dose-dipendenti\n- Esempio: intolleranza al lattosio (deficit enzimatico)\n\nSENSIBILITÀ NON CELIACA AL GLUTINE\n- Sintomi simili alla celiachia ma senza danno intestinale\n- Diagnosi per esclusione\n\nLe intolleranze più comuni:\n1. Lattosio (deficit di lattasi)\n2. Fruttosio\n3. Istamina\n4. FODMAP\n\nAttenzione ai test non validati scientificamente (es. test citotossico, vega test). Affidati sempre a professionisti qualificati per una diagnosi corretta.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "1 marzo 2025",
+   "image": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800",
+   "category": "Patologie",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499786",
+   "updatedAt": "2026-10-29T17:53:24.499787"
+  },
+  {
+   "id": "b8",
+   "title": "L'importanza della colazione",
+   "excerpt": "La colazione è davvero il pasto più importante della giornata? Scopri cosa dice la scienza e come fare una colazione bilanciata.",
+   "content": "La colazione viene spesso definita il pasto più importante della giornata. Ma è davvero così? La risposta dipende da diversi fattori individuali.\n\nBenefici di una colazione bilanciata:\n- Riattiva il metabolismo dopo il digiuno notturno\n- Migliora la concentrazione e le performance cognitive\n- Riduce la fame e gli spuntini poco salutari durante la giornata\n- Fornisce energia per le attività mattutine\n\nUna colazione ideale dovrebbe contenere:\n- PROTEINE: uova, yogurt greco, frutta secca\n- CARBOIDRATI COMPLESSI: pane integrale, avena, frutta\n- GRASSI BUONI: frutta secca, avocado, olio EVO\n\nEsempi di colazione bilanciata:\n1. Porridge con frutta fresca e noci\n2. Uova strapazzate con pane integrale e avocado\n3. Yogurt greco con muesli e frutti di bosco\n4. Pancakes proteici con banana\n\nE chi preferisce saltare la colazione? Il digiuno intermittente può essere una strategia valida per alcuni, ma va personalizzato con l'aiuto di un professionista.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "25 febbraio 2025",
+   "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800",
+   "category": "Alimentazione",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499791",
+   "updatedAt": "2026-10-29T17:53:24.499791"
+  },
+  {
+   "id": "b9",
+   "title": "Alimentazione e sport: cosa mangiare prima e dopo l'allenamento",
+   "excerpt": "Ottimizza le tue performance sportive con la giusta alimentazione pre e post workout.",
+   "content": "L'alimentazione è fondamentale per massimizzare le performance sportive e favorire il recupero. Ecco le linee guida per nutrirsi correttamente intorno all'allenamento.\n\nPRIMA DELL'ALLENAMENTO (2-3 ore prima)\nPasto completo con:\n- Carboidrati complessi (pasta, riso, pane integrale)\n- Proteine magre (pollo, pesce, uova)\n- Grassi limitati (rallentano la digestione)\n\nSNACK PRE-WORKOUT (30-60 minuti prima)\n- Banana\n- Barretta energetica\n- Gallette di riso con miele\n\nDURANTE L'ALLENAMENTO\n- Acqua per sessioni sotto i 60 minuti\n- Bevande isotoniche per sessioni più lunghe\n\nDOPO L'ALLENAMENTO (entro 30-60 minuti)\nLa finestra anabolica: momento ideale per il recupero\n- Proteine: 20-40g per stimolare la sintesi proteica\n- Carboidrati: per ripristinare le riserve di glicogeno\n\nEsempi di snack post-workout:\n- Frullato proteico con banana\n- Yogurt greco con frutta\n- Petto di pollo con riso\n\nIdratazione: bevi 500ml di acqua per ogni kg perso durante l'attività.",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "20 febbraio 2025",
+   "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800",
+   "category": "Sport",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499795",
+   "updatedAt": "2026-10-29T17:53:24.499795"
+  },
+  {
+   "id": "b10",
+   "title": "Microbiota intestinale: il secondo cervello",
+   "excerpt": "Scopri come i batteri intestinali influenzano la tua salute fisica e mentale e come prendertene cura attraverso l'alimentazione.",
+   "content": "Il microbiota intestinale è l'insieme dei microrganismi che popolano il nostro intestino. Questi trilioni di batteri svolgono funzioni fondamentali per la nostra salute.\n\nFunzioni del microbiota:\n- Digestione e assorbimento dei nutrienti\n- Produzione di vitamine (K, B12, folati)\n- Regolazione del sistema immunitario\n- Comunicazione con il cervello (asse intestino-cervello)\n- Protezione contro patogeni\n\nSegnali di disbiosi (squilibrio del microbiota):\n- Gonfiore e disturbi digestivi\n- Stanchezza cronica\n- Problemi cutanei\n- Disturbi dell'umore\n- Infezioni ricorrenti\n\nCome nutrire il microbiota:\n\nPREBIOTICI (nutrono i batteri buoni)\n- Aglio, cipolla, porri\n- Asparagi, carciofi\n- Banane verdi\n- Avena\n\nPROBIOTICI (introducono batteri benefici)\n- Yogurt, kefir\n- Crauti, kimchi\n- Miso, tempeh\n\nFIBRE\n- Almeno 30g al giorno da frutta, verdura, legumi e cereali integrali\n\nEvita l'uso indiscriminato di antibiotici e riduci zuccheri e alimenti ultra-processati che favoriscono i batteri \"cattivi\".",
+   "author": "dott.ssa Paola Buoninfante",
+   "date": "15 febbraio 2025",
+   "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800",
+   "category": "Salute",
+   "published": true,
+   "createdAt": "2026-10-29T17:53:24.499798",
+   "updatedAt": "2026-10-29T17:53:24.499799"
+  }
+ ],
+ "services": [
+  {
+   "id": "s1",
+   "title": "Bioterapia Nutrizionale",
+   "category": "Nutrizione",
+   "price": null,
+   "duration": null,
+   "description": "Bioterapia nutrizionale per il dimagrimento e per il supporto nutrizionale nelle patologie. Un approccio personalizzato che utilizza il cibo come strumento terapeutico.",
+   "image": "/api/uploads/pesce-griglia.jpg",
+   "createdAt": "2026-10-29T17:53:25.232831",
+   "updatedAt": "2026-10-29T17:53:25.232834"
+  },
+  {
+   "id": "s2",
+   "title": "Dieta Chetogenica",
+   "category": "Dimagrimento",
+   "price": null,
+   "duration": null,
+   "description": "Diete chetogeniche per obesità e dimagrimento veloce. Percorsi strutturati per raggiungere i tuoi obiettivi di peso in modo sicuro e controllato.",
+   "image": "/api/uploads/alimenti-grassi.jpg",
+   "createdAt": "2026-10-29T17:53:25.232845",
+   "updatedAt": "2026-10-29T17:53:25.232845"
+  },
+  {
+   "id": "s3",
+   "title": "Dieta per lo Sport",
+   "category": "Sport",
+   "price": null,
+   "duration": null,
+   "description": "Piani alimentari personalizzati per atleti e sportivi. Ottimizza le tue performance con un'alimentazione studiata sulle tue esigenze.",
+   "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800",
+   "createdAt": "2026-10-29T17:53:25.232849",
+   "updatedAt": "2026-10-29T17:53:25.232849"
+  },
+  {
+   "id": "s4",
+   "title": "Alimentazione in Gravidanza e Allattamento",
+   "category": "Maternità",
+   "price": null,
+   "duration": null,
+   "description": "Piani alimentari per donne in gravidanza e allattamento. Tutti i nutrienti necessari per mamma e bambino senza carenze di vitamine ed elettroliti.",
+   "image": "/api/uploads/medici-centro-salerno-022-1104w.jpg",
+   "createdAt": "2026-10-29T17:53:25.232853",
+   "updatedAt": "2026-10-29T17:53:25.232853"
+  },
+  {
+   "id": "s5",
+   "title": "Nutrizione Oncologica",
+   "category": "Patologie",
+   "price": null,
+   "duration": null,
+   "description": "Valutazione dello stato di nutrizione del paziente oncologico e elaborazione di strategie nutrizionali personalizzate per supportare la terapia antitumorale.",
+   "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+   "createdAt": "2026-10-29T17:53:25.232856",
+   "updatedAt": "2026-10-29T17:53:25.232856"
+  },
+  {
+   "id": "s6",
+   "title": "Nutrizione Geriatrica",
+   "category": "Età",
+   "price": null,
+   "duration": null,
+   "description": "Piani nutrizionali per anziani, studiati per mantenere uno stato di salute ottimale e prevenire carenze nutrizionali tipiche dell'età avanzata.",
+   "image": "https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?w=800",
+   "createdAt": "2026-10-29T17:53:25.232859",
+   "updatedAt": "2026-10-29T17:53:25.232860"
+  },
+  {
+   "id": "s7",
+   "title": "Alimentazione Infanzia e Adolescenza",
+   "category": "Età",
+   "price": null,
+   "duration": null,
+   "description": "Piani alimentari per bambini e adolescenti. Educazione alimentare per una crescita sana e lo sviluppo di corrette abitudini alimentari.",
+   "image": "https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800",
+   "createdAt": "2026-10-29T17:53:25.232863",
+   "updatedAt": "2026-10-29T17:53:25.232863"
+  },
+  {
+   "id": "s8",
+   "title": "Nutrizione per la Menopausa",
+   "category": "Donna",
+   "price": null,
+   "duration": null,
+   "description": "Supporto nutrizionale per affrontare i cambiamenti della menopausa. Piani personalizzati per gestire peso, energia e benessere.",
+   "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
+   "createdAt": "2026-10-29T17:53:25.232866",
+   "updatedAt": "2026-10-29T17:53:25.232867"
+  }
+ ],
+ "products": [
+  {
+   "id": "e4c07d54-e31f-42dd-bd45-486676bfbd90",
+   "name": "Sali Minerali Metis",
+   "category": "Integratori",
+   "price": 13.0,
+   "image": "/api/uploads/sali-minerali-672w.webp",
+   "description": "Integratore alimentare a base di Magnesio, Potassio ed Acido L-Aspartico. Il Magnesio contribuisce alla riduzione della stanchezza e dell'affaticamento, contribuisce all'equilibrio elettrolitico e al normale metabolismo energetico. Il Potassio contribuisce alla normale funzione muscolare. Peso netto: 180g - 20 bustine da 9g. Senza glutine - Naturalmente privo di lattosio.",
+   "inStock": true,
+   "featured": true,
+   "brand": "Metis",
+   "subtitle": "A base di Magnesio e Potassio",
+   "fullDescription": "Integratore alimentare a base di Magnesio, Potassio ed Acido L-Aspartico.\n\nIl Magnesio contribuisce alla riduzione della stanchezza e dell'affaticamento, contribuisce all'equilibrio elettrolitico e al normale metabolismo energetico.\n\nIl Potassio contribuisce alla normale funzione muscolare.",
+   "benefits": [
+    "Riduzione della stanchezza e dell'affaticamento",
+    "Contribuisce all'equilibrio elettrolitico",
+    "Supporta il normale metabolismo energetico",
+    "Contribuisce alla normale funzione muscolare"
+   ],
+   "ingredients": [
+    "Maltodestrine",
+    "Magnesio Citrato",
+    "Potassio Citrato",
+    "Acido L-Aspartico"
+   ],
+   "fullIngredients": "Maltodestrine; Potassio citrato; Magnesio citrato; Correttore di acidità: acido tartarico; succo concentrato di arancio disidratato; acido L-Aspartico; aroma; Agente antiagglomerante: biossido di silicio; Edulcorante: sucralosio.",
+   "netWeight": "180g",
+   "format": "20 bustine da 9g",
+   "flavor": null,
+   "glutenFree": true,
+   "lactoseFree": true,
+   "nutritionalInfo": null,
+   "usage": "Si consiglia l'assunzione di 1 o 2 bustine al giorno. Per l'apporto di potassio si consiglia di sentire il parere del medico.",
+   "warnings": "Tenere fuori dalla portata dei bambini al di sotto dei 3 anni. Non superare la dose giornaliera consigliata. Gli integratori non vanno intesi quali sostituti di una dieta variata ed equilibrata e di uno stile di vita sano.",
+   "createdAt": "2026-02-20T15:06:55.637000",
+   "updatedAt": "2026-02-20T15:06:55.637000"
+  },
+  {
+   "id": "dd3ef0e5-8d7b-4535-99b0-56c92ce23151",
+   "name": "Omega 3 Metis",
+   "category": "Integratori",
+   "price": 13.0,
+   "image": "/api/uploads/omega3.jpg",
+   "description": "Integratore alimentare a base di EPA e DHA. L'assunzione giornaliera di 250mg di EPA e di DHA contribuisce alla normale funzione cardiaca. L'assunzione giornaliera di 250mg di DHA contribuisce al mantenimento della normale capacità visiva e funzione cerebrale. Peso netto: 42g - 30 perle da 1400mg. Senza glutine - Naturalmente privo di lattosio.",
+   "inStock": true,
+   "featured": true,
+   "brand": "Metis",
+   "subtitle": "A base di EPA e DHA",
+   "fullDescription": "Integratore alimentare a base di EPA e DHA.\n\nL'assunzione giornaliera di 250mg di EPA e di DHA contribuisce alla normale funzione cardiaca.\n\nL'assunzione giornaliera di 250mg di DHA contribuisce al mantenimento della normale capacità visiva e funzione cerebrale.",
+   "benefits": [
+    "Contribuisce alla normale funzione cardiaca",
+    "Mantiene la normale capacità visiva",
+    "Supporta la normale funzione cerebrale",
+    "Fonte di acidi grassi essenziali Omega-3"
+   ],
+   "ingredients": [
+    "Olio di Pesce (Omega 3)",
+    "Antiossidanti: Miscela di Tocoferoli Naturali",
+    "Gelatina Alimentare",
+    "Agente di Resistenza: Glicerolo"
+   ],
+   "fullIngredients": "Olio di pesce (Omega 3); Antiossidanti: miscela di tocoferoli naturali; Gelatina alimentare; Agente di resistenza: glicerolo.",
+   "netWeight": "42g",
+   "format": "30 perle da 1400mg",
+   "flavor": null,
+   "glutenFree": true,
+   "lactoseFree": true,
+   "nutritionalInfo": null,
+   "usage": "Si consiglia l'assunzione di 1 perla al giorno.",
+   "warnings": "Tenere fuori dalla portata dei bambini al di sotto dei 3 anni. Non superare la dose giornaliera consigliata. Gli integratori non vanno intesi quali sostituti di una dieta variata ed equilibrata e di uno stile di vita sano.",
+   "createdAt": "2026-02-20T15:06:55.637000",
+   "updatedAt": "2026-02-20T15:06:55.637000"
+  },
+  {
+   "id": "d28ef2cb-6bcf-4b26-b3c2-2c513e782cd9",
+   "name": "Vitamina D Metis",
+   "category": "Integratori",
+   "price": 15.0,
+   "image": "/api/uploads/vitamina-d-metis-786h.webp",
+   "description": "VIT D Metis - Soluzione oleosa in gocce. Integratore alimentare a base di Vitamina D3 che contribuisce al normale assorbimento/utilizzo del calcio e del fosforo, contribuisce al mantenimento di ossa normali e alla normale funzione del sistema immunitario. Gusto frutti rossi. Volume netto: 30ml. Senza glutine - Naturalmente privo di lattosio.",
+   "inStock": true,
+   "featured": true,
+   "brand": "Metis",
+   "subtitle": "Soluzione oleosa - gocce",
+   "fullDescription": "La vitamina D è una vitamina liposolubile la cui funzione principale è quella di regolare l'assorbimento del calcio e del fosforo nell'intestino, favorendo la formazione e la salute di ossa e denti. Inoltre, contribuisce al corretto funzionamento del sistema immunitario.\n\nÈ principalmente prodotta a livello della pelle attraverso l'esposizione al sole. Può essere assunta anche attraverso la dieta, ma solo pochi alimenti possono essere considerati buone fonti di Vitamina D. Fattori come dieta, latitudine e stile di vita incidono notevolmente sulla produzione di questa vitamina.\n\nI sintomi della carenza di Vitamina D possono includere: affaticamento, dolori muscolari, debolezza ossea e rischio di fratture.\n\nIn caso di carenza è possibile procedere all'integrazione di vitamina D. La posologia e la durata del trattamento devono essere determinate dal medico in base alle necessità individuali. 0,5 ml di VitD Metis corrispondono a 2000 UI di Vitamina D3 al giorno, da assumere durante o dopo i pasti. La sospensione oleosa può essere somministrata direttamente in bocca o miscelata a cibo o bevande.",
+   "benefits": [
+    "Favorisce l'assorbimento del calcio nell'intestino tenue",
+    "Favorisce il deposito di calcio nelle ossa",
+    "Promuove la salute delle ossa, dei denti e delle cartilagini",
+    "Aiuta a regolare la risposta infiammatoria",
+    "Migliora la difesa dell'organismo contro le infezioni"
+   ],
+   "ingredients": [
+    "Olio di semi di Girasole",
+    "Vitamina E (DL-alfa-tocoferil acetato)",
+    "Vitamina D (Colecalciferolo)",
+    "Aromi"
+   ],
+   "fullIngredients": "Olio di semi di Girasole; Antiossidante: Vitamina E (DL-alfa-tocoferil acetato); Vitamina D (Colecalciferolo); Aromi.",
+   "netWeight": "30ml",
+   "format": "Soluzione oleosa in gocce",
+   "flavor": "Frutti rossi",
+   "glutenFree": true,
+   "lactoseFree": true,
+   "nutritionalInfo": [
     {
-      "id": "s1",
-      "title": "Consulenza Nutrizionale",
-      "price": 80.0,
-      "duration": "60 min",
-      "description": "Prima visita con valutazione completa e piano alimentare personalizzato",
-      "image": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600",
-      "category": "consulenze"
-    },
-    {
-      "id": "s2",
-      "title": "Bioimpedenziometria",
-      "price": 40.0,
-      "duration": "30 min",
-      "description": "Analisi della composizione corporea con strumentazione avanzata",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600",
-      "category": "analisi"
-    },
-    {
-      "id": "s3",
-      "title": "Dieta Chetogenica",
-      "price": 120.0,
-      "duration": "90 min",
-      "description": "Programma completo per dimagrimento con dieta chetogenica",
-      "image": "/api/uploads/dieta_chetogenica.jpg",
-      "category": "programmi"
-    },
-    {
-      "id": "s4",
-      "title": "Nutrizione Sportiva",
-      "price": 100.0,
-      "duration": "60 min",
-      "description": "Piano alimentare personalizzato per atleti e sportivi",
-      "image": "/api/uploads/nutrizione_sportiva.jpg",
-      "category": "programmi"
-    },
-    {
-      "id": "s5",
-      "title": "Nutrizione in Gravidanza",
-      "price": 90.0,
-      "duration": "60 min",
-      "description": "Supporto nutrizionale durante gravidanza e allattamento",
-      "image": "https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=600",
-      "category": "consulenze"
-    },
-    {
-      "id": "s6",
-      "title": "Controllo Periodico",
-      "price": 50.0,
-      "duration": "30 min",
-      "description": "Visita di controllo e adattamento del piano alimentare",
-      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600",
-      "category": "consulenze"
+     "nutrient": "Vitamina D3",
+     "perDose": "50 mcg (2000 UI)",
+     "vnr": "1000%"
     }
-  ],
-  "products": [
-    {
-      "id": "1",
-      "name": "Omega 3 Premium",
-      "category": "integratori",
-      "price": 29.9,
-      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600",
-      "description": "Integratore di Omega 3 ad alto dosaggio, essenziale per la salute cardiovascolare",
-      "inStock": true,
-      "featured": true
-    },
-    {
-      "id": "2",
-      "name": "Sali Minerali Complex",
-      "category": "integratori",
-      "price": 19.9,
-      "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600",
-      "description": "Mix completo di sali minerali per il benessere quotidiano",
-      "inStock": true,
-      "featured": true
-    },
-    {
-      "id": "3",
-      "name": "Vitamina D3",
-      "category": "integratori",
-      "price": 15.9,
-      "image": "https://images.unsplash.com/photo-1550572017-4c6b0c9d0885?w=600",
-      "description": "Vitamina D3 per il supporto del sistema immunitario",
-      "inStock": true,
-      "featured": false
-    },
-    {
-      "id": "4",
-      "name": "Probiotici Avanzati",
-      "category": "integratori",
-      "price": 34.9,
-      "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600",
-      "description": "Formula avanzata di probiotici per la salute intestinale",
-      "inStock": true,
-      "featured": true
-    },
-    {
-      "id": "5",
-      "name": "Magnesio Supremo",
-      "category": "integratori",
-      "price": 22.9,
-      "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=600",
-      "description": "Magnesio altamente biodisponibile per energia e relax",
-      "inStock": true,
-      "featured": false
-    },
-    {
-      "id": "6",
-      "name": "Multivitaminico Completo",
-      "category": "integratori",
-      "price": 27.9,
-      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600",
-      "description": "Formula completa di vitamine e minerali essenziali",
-      "inStock": true,
-      "featured": false
-    }
-  ],
-  "blog_posts": [
-    {
-      "id": "b1",
-      "title": "Dieta chetogenica e fertilità",
-      "excerpt": "Migliorare gli indici di fertilità femminili e maschili attraverso l'alimentazione",
-      "content": "La dieta chetogenica può avere effetti positivi sulla fertilità sia maschile che femminile. Questo regime alimentare, caratterizzato da un basso apporto di carboidrati e un alto contenuto di grassi, può contribuire a regolare gli ormoni e migliorare la salute riproduttiva...",
-      "author": "Dott.ssa Paola Buoninfante",
-      "date": "13 marzo 2025",
-      "image": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800",
-      "category": "Nutrizione",
-      "published": true
-    },
-    {
-      "id": "b2",
-      "title": "Alimentazione sostenibile: il modello della dieta mediterranea",
-      "excerpt": "L'impronta ecologica delle nostre scelte alimentari",
-      "content": "La dieta mediterranea rappresenta un modello di alimentazione sostenibile riconosciuto dall'UNESCO come patrimonio culturale immateriale dell'umanità. Questo regime alimentare non solo promuove la salute umana, ma ha anche un impatto positivo sull'ambiente...",
-      "author": "Dott.ssa Paola Buoninfante",
-      "date": "13 marzo 2025",
-      "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800",
-      "category": "Sostenibilità",
-      "published": true
-    },
-    {
-      "id": "b3",
-      "title": "La nutrizione per la fibromialgia",
-      "excerpt": "Ridurre l'infiammazione e curare il microbiota intestinale",
-      "content": "Un approccio nutrizionale mirato può aiutare a gestire i sintomi della fibromialgia. La ricerca ha dimostrato che una dieta anti-infiammatoria e la cura del microbiota intestinale possono portare a miglioramenti significativi nella qualità della vita dei pazienti...",
-      "author": "Dott.ssa Paola Buoninfante",
-      "date": "13 marzo 2025",
-      "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
-      "category": "Patologie",
-      "published": true
-    }
-  ]
+   ],
+   "usage": "Si consiglia l'assunzione di 0,5 ml al giorno. Non superare la dose giornaliera consigliata.",
+   "warnings": "Tenere fuori dalla vista e dalla portata dei bambini al di sotto dei 3 anni di età al fine di evitarne l'ingestione accidentale. Non superare la dose giornaliera consigliata senza parere medico. Gli integratori non vanno intesi quali sostituti di una dieta variata ed equilibrata e di uno stile di vita sano. Non utilizzare in caso di ipersensibilità verso uno o più ingredienti contenuti. Non utilizzare in caso di confezione non integra e/o dopo la data di scadenza. La data di scadenza si riferisce al prodotto correttamente conservato e in confezione integra.",
+   "createdAt": "2026-02-20T15:06:55.637000",
+   "updatedAt": "2026-02-20T15:06:55.637000"
+  }
+ ]
 }
